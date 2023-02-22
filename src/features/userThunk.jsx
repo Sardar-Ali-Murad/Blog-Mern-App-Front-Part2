@@ -3,7 +3,7 @@ import axios from "axios";
 export const setupUserLogin = async (data, route, thunkAPI) => {
   try {
     let props = await axios.post(
-      `http://localhost:5000/api/v1/auth/${route}`,
+      `https://blog-back-pied.vercel.app/api/v1/auth/${route}`,
       data
     );
     return props.data;
@@ -15,7 +15,7 @@ export const setupUserLogin = async (data, route, thunkAPI) => {
 export const setupUserRegister = async (data, route, thunkAPI) => {
   try {
     let props = await axios.post(
-      `http://localhost:5000/api/v1/auth/${route}`,
+      `https://blog-back-pied.vercel.app/api/v1/auth/${route}`,
       data
     );
     return props.data;

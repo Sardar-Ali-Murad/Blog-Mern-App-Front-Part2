@@ -7,7 +7,7 @@ let initialState={
     alertText:"",
     user:JSON.parse(localStorage.getItem("user")) || null,
     token:JSON.parse(localStorage.getItem("token")) || "",
-    light:JSON.parse(localStorage.getItem("light")) || false,
+    light:JSON.parse(localStorage.getItem("light")) || true,
     userImage:""
 }
 import {setupUserLogin,setupUserRegister,userImage}  from "./userThunk"

@@ -30,7 +30,7 @@ const AllBlogs = () => {
           year: "numeric",
         });
         return (
-            <div>
+            <div style={{margin:"30px 0px"}}>
             <div className="singleBlogMain">
               <img src={blog?.image} style={{ marginTop: "40px" }} />
               <div className="blogContent">
@@ -40,13 +40,13 @@ const AllBlogs = () => {
                   >
                 <h4 style={{ color:"blue"}}>{blog?.title}</h4>
                     </Link>
-                    <div className="grid-even-2" style={{alignItems:"center",marginTop:"40px"}}>
+                    <div className="grid-even-2" style={{alignItems:"center",marginTop:"5px"}}>
                   <img src={blog.user.image} style={{height:"60px",width:"60px",borderRadius:"50%"}}/>
                   <p>{formattedDate}</p>
                     </div>
                   {/* <h5 style={{ color: "gray",margin:"0px"}}>{blog?.user.firstName}</h5> */}
                 <p>{blog.description.slice(0, 100)}...</p>
-                <div style={{display:"flex",alignItems:"center",gap:"30px",marginTop:"10px"}}>
+                <div style={{display:"flex",alignItems:"center",gap:"30px",marginTop:"5px"}}>
                 {
                     blog.votes.includes(user._id)?<BsArrowUpCircle style={{fontSize:"30px",marginTop:"10px",marginLeft:'10px'}} onClick={()=>dispatch(changeVotes(blog._id))}/>:<BsArrowDownCircle style={{fontSize:"30px",marginTop:"10px",marginLeft:'10px'}} onClick={()=>dispatch(changeVotes(blog._id))}/>
                 }

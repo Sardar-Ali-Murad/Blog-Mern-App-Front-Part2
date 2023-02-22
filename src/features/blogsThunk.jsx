@@ -19,7 +19,7 @@ export const createBlogImage = async (event, thunkAPI) => {
     let {token} = thunkAPI.getState().store;
       
     try {
-      let props = await axios.post(`http://localhost:5000/api/v1/blog`,{title,description:description.replace(/<[^>]+>/g, ''),summary,image:Image}, {
+      let props = await axios.post(`https://blog-back-pied.vercel.app/api/v1/blog`,{title,description:description.replace(/<[^>]+>/g, ''),summary,image:Image}, {
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -36,7 +36,7 @@ export const createBlogImage = async (event, thunkAPI) => {
     let {token} = thunkAPI.getState().store;
       
     try {
-      let props = await axios.patch(`http://localhost:5000/api/v1/blog/${blogId}`,{title,description:description.replace(/<[^>]+>/g, ''),summary,image:Image}, {
+      let props = await axios.patch(`https://blog-back-pied.vercel.app/api/v1/blog/${blogId}`,{title,description:description.replace(/<[^>]+>/g, ''),summary,image:Image}, {
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -52,7 +52,7 @@ export const createBlogImage = async (event, thunkAPI) => {
     let {token} = thunkAPI.getState().store;
       
     try {
-      let props = await axios.get(`http://localhost:5000/api/v1/blog` ,{
+      let props = await axios.get(`https://blog-back-pied.vercel.app/api/v1/blog` ,{
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -67,7 +67,7 @@ export const createBlogImage = async (event, thunkAPI) => {
   export const getSingleBlog= async (blogId, thunkAPI) => {
     let {token} = thunkAPI.getState().store;
     try {
-      let props = await axios.get(`http://localhost:5000/api/v1/blog/${blogId}` ,{
+      let props = await axios.get(`https://blog-back-pied.vercel.app/api/v1/blog/${blogId}` ,{
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -81,7 +81,7 @@ export const createBlogImage = async (event, thunkAPI) => {
   export const deleteBlog= async (blogId, thunkAPI) => {
     let {token} = thunkAPI.getState().store;
     try {
-      let props = await axios.delete(`http://localhost:5000/api/v1/blog/${blogId}` ,{
+      let props = await axios.delete(`https://blog-back-pied.vercel.app/api/v1/blog/${blogId}` ,{
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -97,7 +97,7 @@ export const createBlogImage = async (event, thunkAPI) => {
   export const Votes= async (blogId, thunkAPI) => {
     let {token} = thunkAPI.getState().store;
     try {
-      let props = await axios.get(`http://localhost:5000/api/v1/blog/vote/${blogId}` ,{
+      let props = await axios.get(`https://blog-back-pied.vercel.app/api/v1/blog/vote/${blogId}` ,{
         headers: {
           authorization: `Bearer ${token}`,
         },
