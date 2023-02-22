@@ -1,0 +1,49 @@
+.input{
+   width: 100%;    
+}
+
+.firstRow{
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.loginMain{
+    padding: 10px;
+    margin-top: 60px;
+}
+
+.loginBtn{
+    padding: 8px;
+    margin-top: 20px;
+}
+
+.underlineText{
+   color: blue;
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.newHere{
+    margin-top: 20px;
+}
+
+
+.imageBox{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.Icons{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:700px) {
+    .firstRow{
+        grid-template-columns: 1fr;
+    }
+}

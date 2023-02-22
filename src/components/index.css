@@ -1,0 +1,90 @@
+.form{
+  padding: 10px;
+}
+
+.labelText{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.headers_Main {
+    background-color: rgb(147, 147, 194);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headers_Main h4{
+    color: white;
+    margin-top: 20px;
+}
+
+.headersMain{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
+.headersPart1 h4{
+    color: blue;
+    margin-top: 20px;
+}
+
+.headersPart1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.headersPart2{
+    display: flex;
+    gap: 70px;
+}
+
+.headersIcons{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.smallLogout{
+    display: none;
+}
+
+@media screen and (max-width:1100px) {
+    .friendsMain{
+        width: 100%;
+    }    
+}
+
+@media screen and (max-width:700px) {
+    .headersPart2{
+        display: none;
+    }
+    .smallLogout{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .singleCard{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .singleCard{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .singleCard{
+        width: 80%;
+    }
+}
+

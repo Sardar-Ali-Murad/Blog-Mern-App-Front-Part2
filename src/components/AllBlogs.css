@@ -1,0 +1,32 @@
+.blogsMain{
+    margin-top: 50px;
+}
+
+.singleBlogMain{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.singleBlogMain img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 30px;
+    flex: 1;
+    height: 200px;
+}
+
+.blogContent{
+    flex: 2;
+}
+
+
+@media screen and (max-width:900px) {
+    .singleBlogMain{
+        flex-direction: column;
+    }
+    .blogContent{
+        margin-bottom: 50px;
+    }
+}
